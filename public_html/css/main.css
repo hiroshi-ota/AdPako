@@ -171,7 +171,8 @@ body, html {
     
     
     
-    @media all and (min-width:480px) and (max-width: 1280px){
+    /*@media all and (min-width:480px) and (max-width: 1280px){*/
+    @media (max-width: 1280px){
         #container-a{
             width: 90%;
             margin-left: 5%;
