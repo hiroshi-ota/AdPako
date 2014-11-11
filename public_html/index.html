@@ -9,15 +9,26 @@
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
         <link href='http://fonts.googleapis.com/css?family=Dosis&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Rajdhani&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        
+        <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+        
     </head>
     <body>
+        
+<script>
+    function scroll_to(selector) {
+        $('html,body').animate({scrollTop: $(selector).offset().top}, 700);
+    return false;
+       };
+
+</script>
         
         <div id="header">
                 <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
                 <p>Producent opakowań z folii LDPE</p>
         </div>
         
-        <div id="container-a">
+<div id="container-a">
             
             <hr>
             
@@ -26,12 +37,12 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="produkty.html">PRODUKTY</a></li>
                     <li><a href="oferta.html">OFERTA</a></li>
-                    <li><a href="kontakt">KONTAKT</a></li>
+                    <li><a href="javascript:void();" onclick="scroll_to('#container-b');">KONTAKT</a></li>
                 </ul>
             </div>
             
-            <div class="description-main">
-                <h1>Witajcie na naszej stronie</h1>
+            <div class="description-main-left">
+                <h1>Witamy na naszej stronie</h1>
                 <br>
                 <p>
                     Firma Produkcyjna AD-PAKO specjalizuje się w wytwarzaniu nietypowych wyrobów z folii miękkich LDPE.
@@ -58,6 +69,47 @@
                     
             </div>
             
+            <div class="photo-main-right">
+                
+            </div>
+            
+            <div id="kontakt-triger">
+                <a href="javascript:void();" onclick="scroll_to('#container-b');"><img src="images/kontakt.png" alt="kontakt-triger"></a>
+            </div>
+
         </div>
+        
+        
+        
+<div id="container-x">
+    
+    <div id="container-b">
+        
+        <div class="opis_firmy">
+            <h1>PRZEDSIĘBIORSTWO WIELOBRANŻOWE <br> AD-PAKO AGNIESZKA DAWID</h1>
+            <br>
+            <p>
+                ul. Inowrocławska 1 <br>
+                85-153 Bydgoszcz <br>
+                Polska <br>
+                <br>
+                NIP: 554-254-17-81<br>
+                REGON: 341631133
+            </p>
+        </div>
+        
+        <div class="kontakt">
+            <h1>SKONTAKTUJ SIĘ Z NAMI:</h1>
+            <br>
+            <p>
+                e-mail:<a href="mailto:biuro@ad-pako.pl"> biuro@ad-pako.pl </a> <br>
+                tel: 731-533-475 <br>
+                
+            </p>
+        </div>
+    
+    </div>
+    
+</div>
     </body>
 </html>
