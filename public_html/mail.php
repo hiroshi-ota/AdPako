@@ -1,131 +1,51 @@
-<?php 
-/*************************************************************************************/
-/* Licencja na użytek prywatny i komercyjny.                                         */
-/* Wymaga pozostawiania poniższych danych o autorze i pochodzeniu skryptu.           */
-/* Autor: Labsta.com Laboratorium Designu                                            */
-/* Skrypt pochodzi ze strony http://websta.pl - Blog o grafice i projektowaniu stron */
-/* 03/02/2010                                                                        */
-/*************************************************************************************/
+<?php
+//filtruje dane użytkownika
+$mail = htmlspecialchars(trim($_POST['mail']));
+$temat =  htmlspecialchars(trim($_POST['temat']));
+$wiadomosc = htmlspecialchars(trim($_POST['tresc']));
+$send = $_POST['send'];
+//mail na który będa wysyłane wiadomości
+$odbiorca = "kamil.kazmierowski@gmail.com";
+//nagłówki
+$header = "Content-type: text/html; charset=utf-8\r\nFrom: $mail";
 
-include ('ustawienia.php');
+//Sprawdzam czy istnieje ciastko, jeżeli tak wyświetlam komunikat
+//if (isset($_COOKIE['send'])) $error ='Odczekaj '.($_COOKIE['send']-time()).' sekund przed wysłaniem kolejnej wiadomości';   
 
-ob_start();
-    include('formularz.php');
-    $formularz = ob_get_contents();
-ob_end_clean();
+if ($send && !isset($_COOKIE['send']))
+    {    
+    //Sprawdzam mail
+    if (empty($mail))
+        { $error .= "Nie wypełniłeś pola <strong>E-mail !</strong><br/>"; }
+    elseif (strlen($mail) > 30)
+        { $error .="Za długi e-mail - max. 30 znaków <br/>";}
+    elseif (preg_match('/^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ0-9\-\_\.]+\@[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ0-9\-\_\.]+\.[a-z]{2,4}$/',$mail) == false)
+        { $error .= "Niepoprawny adres E-mail! <br/>"; }
+        
+    //Sprawdzam temat
+    if (empty($temat))
+        { $error .= "Nie wypełniłeś pola <strong>Temat !</strong><br/>"; }
+    elseif (strlen($temat) > 120)
+        { $error .="Za długi temat - max. 120 znaków <br/>";}
+        
+    //Sprawdzam wiadomosc
+    if (empty($wiadomosc))
+        { $error .= "Nie wypełniłeś pola <strong>Wiadomość !</strong><br/>"; }
+    elseif (strlen($wiadomosc) > 400)
+        { $error .="Za długa wiadomość - max. 400 znaków <br/>";}
 
-
-function wyswietl_forme($komunikat='') {
-	global $formularz;
-	
-	$do_zmiany = array(
-		'#komunikat#',
-		'#strona#',
-		'#nick#',
-		'#mail#',
-		'#temat#',
-		'#tresc#'
-	);
-	$zmien_na = array(
-		$komunikat,
-		$_SERVER['REQUEST_URI'],
-		$_POST['nick'],
-		$_POST['mail'],
-		$_POST['temat'],
-		$_POST['tresc']
-	);
-	
-	$formularz = str_replace ( $do_zmiany, $zmien_na, $formularz);
-	
-	return $formularz;	
-}
-
-
-function waliduj() {
-	global $komunikat;
-	global $valid;
-	
-	if( $valid['nick'] > 0 ) {
-		if(strlen($_POST['nick']) < $valid['nick'] ){
-			$walidacja['nick'] = $komunikat['nick']; 
-		}
-	}
-	
-	if( $valid['mail'] == 1 ) {
-		if(!filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL)) {
-			$walidacja['mail'] =  $komunikat['mail'];
-		}
-	}
-	
-	if( $valid['temat'] > 0 ) {
-		if(strlen($_POST['temat']) < $valid['temat'] ){
-			$walidacja['temat'] = $komunikat['temat']; 
-		}
-	}
-	
-	if( $valid['tresc'] > 0 ) {
-		if(strlen($_POST['tresc']) < $valid['tresc'] ){
-			$walidacja['tresc'] = $komunikat['tresc']; 
-		}
-	}
-	
-	if(empty($walidacja)) {
-		return 'true';
-	}else{
-		return $walidacja;
-	}
-	
-}
-
-// Działanie
-if (($_SERVER['REQUEST_METHOD'] == 'POST')) {// wejście postem
-		$walidacja = waliduj();
-		
-		if ($walidacja == 'true'){ //poprawnie wypełniony formularz
-			
-			if(mail($adres_odbiorcy,"=?UTF-8?B?".base64_encode($_POST['temat'])."?=",'<p>Od: <b>'.$_POST['nick'].'</b></p><pre>'.$_POST['tresc'].'</pre>','From:'.$_POST['mail']."\r\nContent-Type: text/html; charset=utf-8")){ //sukces
-				print '
-					<div id="sukces">
-						<p>'.$komunikat['sukces'].'</p>
-					</div>
-					';	
-			}else{ //bląd serwera
-				print '	
-					<div id="blad">
-						<p>'.$komunikat['fail'].'</p>
-					</div>
-					';
-				print wyswietl_forme();
-			}
-			
-		}else{
-			//błędna walidacja
-			$blad_walidacji = $walidacja;
-			
-			$blad_walidacji = '
-					<div id="blad">
-						<p>'.$komunikat['blad'].'</p>
-						<ul>
-						';
-			foreach ($walidacja as $wpis) {
-				$blad_walidacji .= '<li>'.$wpis.'</li>';
-			}	
-			$blad_walidacji .= '
-						</ul>
-					</div>
-					';
-					
-			print wyswietl_forme($blad_walidacji);
-		}	
-	
-}else{
-	// nowe wejście
-	print wyswietl_forme();
-}
-
-
-
-
-
-
+    //Sprawdzam czy są błędy i wysyłam wiadomość
+    if (empty($error))
+        {
+        $list = "Przysłał - $imie ($mail) <br/> Treść wiadomości - $wiadomosc";
+        
+        if (mail($odbiorca, $temat, $list, $header))   
+        {
+         $error .= "Twoja wiadomość została wysłana";
+         setcookie("send", time()+60, time()+60);
+         }
+        else
+            { $error .= "Wystąpił błąd podczas wysyłania wiadomości, spróbuj później.";}   
+        }
+    }
 ?>

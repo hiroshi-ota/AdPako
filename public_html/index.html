@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
     <head>
         <title>AD-Pako test</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--<meta http-equiv="viewport" content="application/xhtml+xml; charset=utf-8" />-->
+        
         <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="css/main.css" rel="stylesheet" type="text/css"/>
         <link href='http://fonts.googleapis.com/css?family=Dosis&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Rajdhani&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
@@ -98,13 +101,21 @@
                 REGON: 341631133
             </p>
         </div>
-        
-        
-        <div class="formularz">
-            <?php include('mail.php'); ?>
-        </div>
-        
-        <div class="kontakt">
+            
+            <form class="formularz" action="" method="post">
+                <p>Temat</p>
+                <input id="temat" type="text" name="temat" class="input-xlarge" placeholder="Twój temat" />
+                <p>Adres e-mail</p>
+                <input id="email" type="mail" name="mail" class="input-xlarge" placeholder="Twój e-mail" />
+                <p>Treść wiadomości</p>
+                <textarea id="tresc" type="text" name="tresc" class="input-xlarge" placeholder="Twoja wiadomość" rows="8"></textarea>
+                <br>
+                    <!--<button type="submit" class="btn-mini" style="color: white; background-color: steelblue"> Wyślij wiadomość</button>-->
+                    <input type="submit" value="Wyślij" id="send" name="send" />
+            </form>
+
+
+<!--        <div class="kontakt">
             <h1>SKONTAKTUJ SIĘ Z NAMI:</h1>
             <br>
             <p>
@@ -112,10 +123,12 @@
                 tel: 731-533-475 <br>
                 
             </p>
-        </div>
+        </div>-->
     
     </div>
     
+    
 </div>
+
     </body>
 </html>
