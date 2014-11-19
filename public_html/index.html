@@ -31,16 +31,18 @@
     
     <div id="header">
             <a href="index.html"><img id="logo" src="images/logo.png" alt="logo"></a>
-            <p>Producent opakowań z folii LDPE</p>
+            
     </div>
             
             <hr>
             
+                <p id="underLogo">Producent opakowań z folii LDPE</p>
+                
             <div class="menu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="strony/produkty.html">PRODUKTY</a></li>
-                    <li><a href="oferta.html">OFERTA</a></li>
+                    <li><a href="images/oferta.pdf" download="Oferta Ad-Pako">OFERTA</a></li>
                     <li><a href="javascript:void();" onclick="scroll_to('#container-b');">KONTAKT</a></li>
                 </ul>
             </div>
@@ -74,7 +76,7 @@
             </div>
             
             <div class="photo-main-right">
-                
+                <img src="images/lozko.png">
             </div>
             
             <div id="kontakt-triger">
@@ -99,19 +101,22 @@
                 <br>
                 NIP: 554-254-17-81<br>
                 REGON: 341631133
+                <br>
+                    <br>
+                TEL: 731-533-454
             </p>
         </div>
             
-            <form class="formularz" action="" method="post">
+            <form class="formularz" action="mail.php" method="post">
+                <p>Adres e-mail</p>
+                <input id="email" type="text" name="mail" class="input-xlarge" placeholder="Twój e-mail" />
                 <p>Temat</p>
                 <input id="temat" type="text" name="temat" class="input-xlarge" placeholder="Twój temat" />
-                <p>Adres e-mail</p>
-                <input id="email" type="mail" name="mail" class="input-xlarge" placeholder="Twój e-mail" />
                 <p>Treść wiadomości</p>
                 <textarea id="tresc" type="text" name="tresc" class="input-xlarge" placeholder="Twoja wiadomość" rows="8"></textarea>
                 <br>
                     <!--<button type="submit" class="btn-mini" style="color: white; background-color: steelblue"> Wyślij wiadomość</button>-->
-                    <input type="submit" value="Wyślij" id="send" name="send" />
+                    <input type="submit" value="Wyślij" id="send" name="send" style="color: steelblue" />
             </form>
 
 

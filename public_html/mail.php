@@ -48,4 +48,8 @@ if ($send && !isset($_COOKIE['send']))
             { $error .= "Wystąpił błąd podczas wysyłania wiadomości, spróbuj później.";}   
         }
     }
+     echo "<script type=\"text/javascript\">
+	   window.setTimeout(\"window.location.replace('index.html');\",0);
+		</script>";
+    
 ?>
