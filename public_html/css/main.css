@@ -251,6 +251,11 @@ body, html {
         //display: inline;
     }
     
+    .produkt hr{
+        border-top: 1px solid steelblue;
+        border-bottom: 0;
+    }
+    
     .produkt h1{
         font-size: 30px;
         font-weight: bolder;
@@ -264,6 +269,7 @@ body, html {
         //margin-top: 1%;
         display: inline-block;
         font-size: 18px;
+        width: 70%;
     }
     
     .produkt ul{
@@ -279,10 +285,6 @@ body, html {
         .left{
             //float: left;
             //text-align: left;
-        }
-        
-        .left p{
-            width: 70%;
         }
         
         .left img{
