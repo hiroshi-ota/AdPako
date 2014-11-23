@@ -261,7 +261,7 @@ body, html {
         font-weight: bolder;
         width:60%;
         padding: 0;
-        margin:0;
+        margin:0 0 5px 0;
     }
     
     .produkt p{
@@ -269,7 +269,7 @@ body, html {
         //margin-top: 1%;
         display: inline-block;
         font-size: 18px;
-        width: 70%;
+        width: 100%;
     }
     
     .produkt ul{
