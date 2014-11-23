@@ -26,7 +26,8 @@ body, html {
         position: relative;
         //padding-top: 2%;
         margin-bottom: 0.5%;
-        width: 235px;
+        width: 150px;
+        display: inline-block;
     }
     
     #underLogo{
@@ -117,6 +118,21 @@ body, html {
         list-style-position: inside;
         width: 50%;
         font-size: 18px;
+    }
+    
+    .description-zalety ul{
+        display: inline-block;
+        text-align: left;
+        list-style-type: square;
+        list-style-position: inside;
+        width: 50%;
+        font-size: 18px;
+    }
+    
+    .description-zalety h2{
+        font-size: 20px;
+        margin-top: 3%;
+        padding: 0;
     }
     
     
@@ -385,6 +401,10 @@ body, html {
         #container-b{
             width: 90%;
             margin-left: 5%;
+        }
+        
+        .description-zalety{
+            display: none;
         }
         
     }
