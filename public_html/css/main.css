@@ -57,7 +57,7 @@ body, html {
     //float: right;
     display: inline-block;
     font-family: 'Dosis', sans-serif;
-    width:100%; // zmieniÃƒâ€žÃ¢â‚¬Â¡ na 49% aby zmieÃƒâ€¦Ã¢â‚¬ÂºciÃƒâ€žÃ¢â‚¬Â¡ razem z napisem pod logo
+    width:100%; // zmieniÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡ na 49% aby zmieÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂºciÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡ razem z napisem pod logo
 }
 
     .menu ul{
@@ -227,15 +227,21 @@ body, html {
     height: auto;
 }
 
+    #container-produkty hr{
+         border-top: 1px solid steelblue;
+         border-bottom: 0;
+    }
+
     #description-produkty{
         margin-top: 10%;
         width: 100%;
         color: #333333;
-        text-align: center;
+        text-align: left;
     }
     
     #description-produkty h1{
-        font-size: 40px;
+        font-size: 30px;
+        
     }
     
     #description-produkty p{
@@ -244,10 +250,26 @@ body, html {
         font-size: 18px;
     }
     
+    .produkt2{
+        width: 100%;
+        display: inline-block;
+    }
+    
+    .produkt2 img{
+        float: right;
+        display: inline-block;
+    }
+    
+    produkt2 p{
+        width: 20%;
+        font-size: 18px;
+    }
+    
     
     .produkt{
         width: 100%;
         margin-top: 5%;
+        display: inline-block;
         //display: inline;
     }
     
@@ -262,14 +284,23 @@ body, html {
         width:60%;
         padding: 0;
         margin:0 0 5px 0;
-    }
+    
+        /* display:  inline-block; */
+}
     
     .produkt p{
         //text-align: justify;
         //margin-top: 1%;
         display: inline-block;
         font-size: 18px;
-        width: 100%;
+        width: 70%;
+    }
+    
+    .produkt img{
+        width: 20%;
+        text-align: right;
+        margin-left: 5%;
+        float: right;
     }
     
     .produkt ul{
@@ -288,10 +319,11 @@ body, html {
         }
         
         .left img{
-            //display: inline-block;
-            //float: right;
-            margin-left: 5%;
+            /*display: inline-block;*/
+            /*float: right;*/
+            /*margin-right: 5%;*/
             width: 20%;
+            float: right;
         }
         
         .right{
@@ -413,7 +445,7 @@ body, html {
         }
         
         .photo-main-right{
-            margin-top: 3%;
+            margin-top: 8%;
             width: 35%;
         }
  
