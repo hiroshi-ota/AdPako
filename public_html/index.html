@@ -18,6 +18,13 @@
         <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
         <script src="js/slimbox2.js" type="text/javascript"></script>
         <link href="css/slimbox2.css" rel="stylesheet" type="text/css"/>
+        
+         <script type="text/javascript">
+            $(document).ready(function(){
+                $('body').hide().fadeIn(500);
+            });
+        </script>
+
     </head>
     <body>
         
@@ -47,7 +54,7 @@
                 <div class="menu">
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="strony/produkty.html">PRODUKTY</a></li>
+                    <li><a id="produkty" href="strony/produkty.html">PRODUKTY</a></li>
                     <li><a href="images/oferta_ad_pako.pdf" download="Oferta Ad-Pako">OFERTA</a></li>
                     <li><a href="javascript:void();" onclick="scroll_to('#container-b');">KONTAKT</a></li>
                 </ul>
