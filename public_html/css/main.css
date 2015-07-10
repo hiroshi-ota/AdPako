@@ -1,13 +1,13 @@
 body, html {
 	margin:0px;
 	width: 100%;
-        height: 100%;
+        
+	height: 100%;
         min-height:100%;
         //max-height: 100%;
         font-family: 'Rajdhani', sans-serif;
         //background-color: white; 
         background-image: url(../images/texture.png);
-        
 	/* background-image: url(../images/siatka.png); */
         padding: 0;
         color: #333333;
@@ -26,17 +26,18 @@ body, html {
         position: relative;
         //padding-top: 2%;
         margin-bottom: 0.5%;
-        width: 235px;
+        width: 8%;
+        display: inline-block;
     }
     
     #underLogo{
-        width: 70%;
+        width: 92%;
         margin-top: 20px;
-        //margin-top: 3%;
+        margin-top: 4%;
         font-size: 35px;
         display: inline-block;
         letter-spacing: 10px;
-        text-align: right;
+        text-align: center;
         float: right;
         color: steelblue;
         opacity: 0.4;
@@ -57,12 +58,12 @@ body, html {
     //float: right;
     display: inline-block;
     font-family: 'Dosis', sans-serif;
-    width:100%; // zmieniÃƒâ€žÃ¢â‚¬Â¡ na 49% aby zmieÃƒâ€¦Ã¢â‚¬ÂºciÃƒâ€žÃ¢â‚¬Â¡ razem z napisem pod logo
+    width:100%; // zmieniÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ na 49% aby zmieÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂºciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ razem z napisem pod logo
 }
 
     .menu ul{
         list-style-type: none;
-        text-align: right;
+        text-align: center;
     }
     
     .menu ul li, ul a{
@@ -71,8 +72,9 @@ body, html {
         color: black;
         text-decoration: none;
         display: inline-block;
-        margin: 0.5%;
+        margin: 0% 4%;
         opacity: 0.6;
+        text-decoration-line: none;
     }
     
     .menu ul li:hover{
@@ -119,12 +121,30 @@ body, html {
         font-size: 18px;
     }
     
+    .description-zalety ul{
+        display: inline-block;
+        text-align: left;
+        list-style-type: square;
+        list-style-position: inside;
+        width: 50%;
+        font-size: 18px;
+    }
+    
+    .description-zalety h2{
+        font-size: 20px;
+        margin-top: 3%;
+        padding: 0;
+    }
+    
     
 .photo-main-right{
     display: inline-block;
     margin-top: 8%;
-    height: 350px;
-    width: 40%;
+    height: 250px;
+    width: 37%;
+    overflow: hidden;
+    opacity: 0.7;
+    border: 1px solid steelblue;
     //margin-right: 0px;
     float: right;
     //border: 1px solid steelblue;
@@ -137,7 +157,7 @@ body, html {
         max-height: 100%;
         //background-color: steelblue;
         background-image: url("../images/tlo.png");
-        padding-bottom: 5%;
+        //padding-bottom: 5%;
         padding-top: 2%;
         margin:0;
     }
@@ -211,19 +231,41 @@ body, html {
     height: auto;
 }
 
+    #container-produkty hr{
+         border-top: 1px solid steelblue;
+         border-bottom: 0;
+    }
+
     #description-produkty{
         margin-top: 10%;
         width: 100%;
         color: #333333;
+        text-align: left;
     }
     
     #description-produkty h1{
-        font-size: 40px;
+        font-size: 30px;
+        
     }
     
     #description-produkty p{
-        text-align: justify;
-        width: 70%;
+/*        text-align: justify;*/
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .produkt2{
+        width: 100%;
+        display: inline-block;
+    }
+    
+    .produkt2 img{
+        float: right;
+        display: inline-block;
+    }
+    
+    produkt2 p{
+        width: 20%;
         font-size: 18px;
     }
     
@@ -231,7 +273,13 @@ body, html {
     .produkt{
         width: 100%;
         margin-top: 5%;
+        display: inline-block;
         //display: inline;
+    }
+    
+    .produkt hr{
+        border-top: 1px solid steelblue;
+        border-bottom: 0;
     }
     
     .produkt h1{
@@ -239,14 +287,30 @@ body, html {
         font-weight: bolder;
         width:60%;
         padding: 0;
-        margin:0;
-    }
+        margin:0 0 5px 0;
+    
+        /* display:  inline-block; */
+}
     
     .produkt p{
         //text-align: justify;
         //margin-top: 1%;
         display: inline-block;
         font-size: 18px;
+        width: 70%;
+    }
+    
+    .produkt img{
+        width: 20%;
+        text-align: right;
+        margin-left: 5%;
+        float: right;
+    }
+    
+    .produkt a span{
+        position: absolute;
+        right: 5px;
+        bottom: 30px;
     }
     
     .produkt ul{
@@ -264,15 +328,12 @@ body, html {
             //text-align: left;
         }
         
-        .left p{
-            width: 70%;
-        }
-        
         .left img{
-            //display: inline-block;
-            //float: right;
-            margin-left: 5%;
+            /*display: inline-block;*/
+            /*float: right;*/
+            /*margin-right: 5%;*/
             width: 20%;
+            float: right;
         }
         
         .right{
@@ -324,14 +385,30 @@ body, html {
 
 #footer{
     position: relative;
+    display: inline-block;
     background-image: url(../images/tlo.png);
     width: 100%;
-    height: 0;
-    padding: 1%;
-    opacity: 0.9;
+    min-height: 10px;
+    padding: 1% 0;
+    //opacity: 0.9;
     z-index: 100;
+    //float: bottom;
     bottom: 0;
+    text-align: center;
 }
+
+    #footer p{
+        padding:0;
+        color: white;
+        //float: left;
+        margin: 0px 5% 2px 5%;
+        display: inline-block;
+    }
+    
+    #footer a{
+        color: white;
+        text-decoration: none;
+    }
         
 .formularz{
     //display: inline-block;
@@ -350,9 +427,117 @@ body, html {
         height: auto;
     }
     
+   /* --- slideshow ---*/
+   
+   
+    #slides {
+      display: none;
+    }
+
+    #slides .slidesjs-navigation {
+      margin-top:5px;
+    }
+
+    a.slidesjs-next,
+    a.slidesjs-previous,
+    a.slidesjs-play,
+    a.slidesjs-stop {
+      background-image: url(../images/btns-next-prev.png);
+      background-repeat: no-repeat;
+      display:block;
+      width:12px;
+      height:18px;
+      overflow: hidden;
+      text-indent: -9999px;
+      float: left;
+      margin-right:5px;
+    }
+
+    a.slidesjs-next {
+      margin-right:10px;
+      background-position: -12px 0;
+    }
+
+    a:hover.slidesjs-next {
+      background-position: -12px -18px;
+    }
+
+    a.slidesjs-previous {
+      background-position: 0 0;
+    }
+
+    a:hover.slidesjs-previous {
+      background-position: 0 -18px;
+    }
+
+    a.slidesjs-play {
+      width:15px;
+      background-position: -25px 0;
+    }
+
+    a:hover.slidesjs-play {
+      background-position: -25px -18px;
+    }
+
+    a.slidesjs-stop {
+      width:18px;
+      background-position: -41px 0;
+    }
+
+    a:hover.slidesjs-stop {
+      background-position: -41px -18px;
+    }
+
+    .slidesjs-pagination {
+      margin: 7px 0 0;
+      float: right;
+      list-style: none;
+    }
+
+    .slidesjs-pagination li {
+      float: left;
+      margin: 0 1px;
+    }
+
+    .slidesjs-pagination li a {
+      display: block;
+      width: 13px;
+      height: 0;
+      padding-top: 13px;
+      background-image: url(../images/pagination.png);
+      background-position: 0 0;
+      float: left;
+      overflow: hidden;
+    }
+
+    .slidesjs-pagination li a.active,
+    .slidesjs-pagination li a:hover.active {
+      background-position: 0 -13px
+    }
+
+    .slidesjs-pagination li a:hover {
+      background-position: 0 -26px
+    }
+
+    #slides a:link,
+    #slides a:visited {
+      color: #333
+    }
+
+    #slides a:hover,
+    #slides a:active {
+      color: #9e2020
+    }
+
+    .navbar {
+      overflow: hidden
+    }
+    
+    /* -- Slideshow END --*/
+    
     
     /*@media all and (min-width:480px) and (max-width: 1280px){*/
-    @media (max-width: 1400px){
+    @media (max-width: 1500px){
         
         #container-produkty{
             width: 90%;
@@ -370,7 +555,7 @@ body, html {
         }
         
         .description-main-left h1{
-            margin-top: 8%;
+            margin-top: 12%;
         }
         
         .description-main-left h2{
@@ -378,8 +563,8 @@ body, html {
         }
         
         .photo-main-right{
-            margin-top: 3%;
-            width: 35%;
+            margin-top: 8%;
+            width: 33%;
         }
  
         #container-b{
@@ -387,6 +572,16 @@ body, html {
             margin-left: 5%;
         }
         
+        .description-zalety{
+            display: none;
+        }
+        
+    }
+    
+    @media (min-height: 800px){
+        .description-zalety{
+            display: block;
+        }
     }
     
     @media (max-width: 500px){
@@ -471,9 +666,5 @@ body, html {
             .formularz p{
                 margin-top: 0.5%;
             }
-        
-        .tlo{
-            
-        }
         
     }

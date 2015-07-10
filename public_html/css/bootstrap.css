@@ -102,7 +102,7 @@ img {
   width: auto\9;
   height: auto;
   max-width: 100%;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
@@ -238,7 +238,7 @@ a {
 a:hover,
 a:focus {
   color: #005580;
-  text-decoration: underline;
+  //text-decoration: underline;
 }
 
 .img-rounded {
